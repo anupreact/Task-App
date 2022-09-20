@@ -1,0 +1,18 @@
+nav {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+  position: sticky;
+  top: 0px;
+  background: rgb(10, 47, 45);
+  z-index: 100;
+  .logo {
+    a {
+      text-decoration: none;
+      color: rgb(238, 216, 21);
+      font-size: 2rem;
+    }
+  }
+}

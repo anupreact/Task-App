@@ -1,0 +1,407 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(5, 58, 66) !important;
+}
+
+.home-container {
+  // border: 1px solid white;
+  margin: 1rem;
+  padding: 0.2rem;
+  section.container {
+    // border: 1px solid white;
+    min-height: 80vh;
+    .heading {
+      color: white;
+      // border: 1px solid white;
+      margin: 1rem;
+      margin-bottom: 3rem;
+      h1 {
+        text-align: center;
+        color: white;
+      }
+    }
+    .greetings {
+      margin: 1rem;
+      padding: 1rem;
+      // border: 1px solid white;
+      div {
+        color: aqua;
+        font-size: 2rem;
+      }
+    }
+    .main-content {
+      // border: 1px solid white;
+      box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+      -webkit-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+      -moz-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+      width: 70vw;
+      margin: 1rem auto;
+      margin-bottom: 3rem;
+      padding: 0.7rem 0rem;
+      .range-picker-container {
+        span {
+          color: white;
+          font-size: bold;
+          font-size: 1.1rem;
+        }
+        .range-picker {
+          border: 1px solid rgb(79, 138, 187);
+          background: rgb(8, 88, 218);
+          cursor: pointer;
+          color: rgb(0, 0, 0);
+          :placeholder-shown {
+            color: white;
+          }
+        }
+      }
+      .row-header {
+        // background: #000;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid rgb(255, 255, 255);
+        margin: 1rem 0rem;
+        justify-content: space-between;
+        align-items: center;
+        align-items: center;
+        h3 {
+          margin-left: 1rem;
+          color: rgb(99, 222, 235);
+        }
+        button {
+          margin-right: 3.54rem;
+          margin-top: 0.4rem;
+          margin-bottom: 0.3rem;
+          padding: 0.3rem 1rem;
+          background: rgb(70, 167, 206);
+          border: none;
+          cursor: pointer;
+          transition: 0.3 sec ease all;
+          color: white;
+          &:hover {
+            background: rgb(26, 176, 235);
+          }
+        }
+      }
+      .row-2 {
+        // border: 1px solid yellow;
+        height: 9rem;
+        margin-top: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h4 {
+          color: rgb(71, 145, 154);
+          font-size: 2rem;
+          margin: 1rem 0rem;
+        }
+        button {
+          margin-top: 0.4rem;
+          padding: 0.3rem 1rem;
+          background: rgb(32, 218, 104);
+          border: none;
+          cursor: pointer;
+          transition: 0.3 sec ease all;
+          color: white;
+          &:hover {
+            background: rgb(26, 176, 235);
+          }
+        }
+      }
+
+      .row-3 {
+        // border: 1px solid yellow;
+        // height: 5rem;
+        padding: 1rem;
+
+        .list {
+          // border: 1px solid red;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0.4rem;
+          margin: 1rem 0rem;
+          border-bottom: 1px solid rgb(172, 172, 172);
+          &:nth-last-child(1) {
+            border: none;
+          }
+
+          .col-1 {
+            width: 8rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            .checkbox {
+              border: 1px solid rgb(23, 194, 220);
+              width: 2rem;
+              height: 2rem;
+            }
+
+            .main {
+              display: block;
+              position: relative;
+              cursor: pointer;
+              margin-right: 0.3rem;
+              font-size: 20px;
+            }
+
+            /* Hide the default checkbox */
+            input[type='checkbox'] {
+              visibility: hidden;
+            }
+
+            /* Creating a custom checkbox
+          based on demand */
+            .geekmark {
+              position: absolute;
+              top: 0;
+              left: 0;
+              height: 25px;
+              width: 25px;
+              border: 1px solid aquamarine;
+            }
+
+            /* Specify the background color to be
+          shown when hovering over checkbox */
+
+            /* Specify the background color to be
+          shown when checkbox is active */
+            .main input:active ~ .geekmark {
+              background-color: rgb(13, 94, 208);
+            }
+
+            /* Specify the background color to be
+          shown when checkbox is checked */
+            .main input:checked ~ .geekmark {
+              background-color: rgb(6, 225, 241);
+            }
+
+            /* Checkmark to be shown in checkbox */
+            /* It is not be shown when not checked */
+            .geekmark:after {
+              content: '';
+              position: absolute;
+              display: none;
+            }
+
+            /* Display checkmark when checked */
+            .main input:checked ~ .geekmark:after {
+              display: block;
+            }
+
+            /* Styling the checkmark using webkit */
+            /* Rotated the rectangle by 45 degree and 
+          showing only two border to make it look
+          like a tickmark */
+            .main .geekmark:after {
+              left: 8px;
+              bottom: 5px;
+              width: 6px;
+              height: 12px;
+              border: solid white;
+              border-width: 0 4px 4px 0;
+              -webkit-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+              transform: rotate(45deg);
+            }
+
+            .details {
+              color: white;
+            }
+          }
+          .description {
+            font-size: 1.1rem;
+            color: white;
+            width: 22%;
+          }
+          .col-2 {
+            display: flex;
+            align-items: center;
+            button {
+              margin-top: 0.4rem;
+              width: 8rem;
+              padding: 0.3rem 1rem;
+              border: none;
+              font-weight: bold;
+              cursor: pointer;
+              transition: 0.3 sec ease all;
+              text-transform: capitalize;
+              color: white;
+            }
+            .bgpending {
+              background: rgb(229, 207, 34);
+            }
+            .bgcompleted {
+              background: rgb(28, 183, 82);
+            }
+            .bgdraft {
+              background: rgb(14, 115, 162);
+              background: rgb(225, 208, 77);
+              color: rgb(255, 255, 255);
+            }
+          }
+          .col-3 {
+            padding: 0rem 20px;
+            button {
+              margin-right: 1rem;
+              margin-top: 0.4rem;
+              padding: 0.3rem 1rem;
+              background: rgb(70, 167, 206);
+              border: none;
+              cursor: pointer;
+              transition: 0.3 sec ease all;
+              color: white;
+              &:hover {
+                background: rgb(26, 176, 235);
+              }
+              &:nth-child(2) {
+                background: rgb(248, 55, 55);
+                transition: 0.3s ease all;
+                &:hover {
+                  background: rgb(249, 28, 28);
+                }
+              }
+            }
+          }
+        }
+
+        .noFilter{
+         display: flex;justify-content: center;align-items: center;flex-direction: column;
+          h1{
+            color:rgb(170, 170, 170)
+          }
+          button{
+            margin-top: 0.4rem;
+            padding: 0.3rem 1rem;
+            background: rgb(10, 216, 227);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            transition: .31s ease all;
+            &:hover {
+              background: rgb(26, 176, 235);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.addtask-container {
+  // border: 1px solid white;
+  // height: 40rem;
+  padding: 1rem;
+  .container {
+    height: 100%;
+    .heading {
+      display: flex;
+      justify-content: center;
+      span {
+        color: white;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 2rem;
+        margin-bottom: 0px !important;
+      }
+    }
+    .main-content {
+      border-radius: 16px;
+      background: linear-gradient(145deg, #002929, #003131);
+      box-shadow: 5px 5px 8px #002323, -5px -5px 8px #003939;
+      width: 50%;
+      margin: 1rem auto;
+      padding: 0.1rem 0.1rem;
+      padding-bottom: 5px;
+      form {
+        // background: #000;
+        padding: 0.2rem 1rem;
+        .input {
+          margin: 1rem;
+          // border: 1px solid aqua;
+
+          input,
+          textarea {
+            border: 1px solid rgb(76, 211, 211);
+            padding: 0.4rem 1rem;
+            width: 100%;
+            background: transparent;
+            outline: none;
+            color: white;
+            &:focus {
+              border: 1px solid rgb(17, 255, 255);
+            }
+            &::placeholder {
+              color: white;
+            }
+          }
+        }
+        .input-select {
+          padding: 0.4rem 0rem;
+          color: white;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          border: 1px solid aqua;
+          input {
+            width: 50%;
+            margin-left: 0.4rem;
+          }
+          select {
+            border: 1px solid rgb(11, 157, 157);
+            padding: 0.4rem 1rem;
+            width: 30%;
+            background: transparent;
+            outline: none;
+            color: white;
+
+            option {
+              background: #000;
+            }
+          }
+        }
+
+        .radio-buttons {
+          margin: 1rem;
+          padding-top: 0.4rem;
+          color: white;
+          display: flex;
+          align-items: center;
+          // border: 1px solid aqua;
+          span {
+            margin-right: 1rem;
+            input {
+              margin-right: 0.4rem;
+            }
+          }
+        }
+
+        button {
+          margin: 1rem;
+          margin-top: 0;
+          // border: 1px solid rgb(11, 157, 157);
+          padding: 0.4rem 1rem;
+          width: 95%;
+          background: rgb(46, 193, 193);
+          outline: none;
+          color: white;
+          border: none;
+          font-weight: bold;
+          text-transform: uppercase;
+          cursor: pointer;
+          transition: 0.3s ease all;
+          &:hover {
+            background: rgb(27, 213, 213);
+            letter-spacing: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
