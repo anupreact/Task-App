@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(5, 58, 66) !important;
+  background: rgb(6, 98, 123) !important;
 }
 
 .home-container {
@@ -34,7 +34,6 @@ body {
       }
     }
     .main-content {
-      // border: 1px solid white;
       box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
       -webkit-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
       -moz-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
@@ -50,14 +49,15 @@ body {
         }
         .range-picker {
           cursor: pointer;
-          color:white;
+          color:rgb(23, 55, 63);
           border:none;
-          padding:1rem;
-          background: rgb(8, 97, 110) ;
+          padding:.6rem 3rem;
+          background: rgb(29, 157, 180) ;
           margin-bottom: 1rem;
-          box-shadow:
-          inset 3px 3px 4px 0 rgba(0,0,0,0.2),
-          inset -2px -2px 3px 0 rgba(255,255,255,0.2);
+        
+          box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+          -webkit-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+          -moz-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
           &::placeholder {
             color: white;
           }
@@ -304,6 +304,7 @@ body {
 .addtask-container {
   // border: 1px solid white;
   // height: 40rem;
+
   padding: 1rem;
   .container {
     height: 100%;
@@ -320,10 +321,10 @@ body {
       }
     }
     .main-content {
-      border-radius: 16px;
-      background: linear-gradient(145deg, #002929, #003131);
-      background: rgb(5, 58, 66) !important;
-      box-shadow: 5px 5px 8px #002323, -5px -5px 8px #003939;
+      // border-radius: 16px;
+      box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+      -webkit-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
+      -moz-box-shadow: -2px 3px 12px 3px rgba(49, 42, 42, 0.75);
       width: 70vw;
       margin: 1rem auto;
       padding: 0.1rem 0.1rem;
