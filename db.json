@@ -1,74 +1,84 @@
 {
   "tasks": [
     {
-      "taskName": "Task Test",
-      "details": "Task Description",
-      "dateFrom": "2022-09-20",
-      "timeFrom": "11:44",
-      "dateTo": "2022-09-30",
-      "timeTo": "23:44",
+      "taskName": "Meditation",
+      "details": "Meditation 15mins\n ",
+      "dateFrom": "2022-10-17",
+      "timeFrom": "",
+      "dateTo": "2022-10-31",
+      "timeTo": "",
       "status": "pending",
       "id": 1
     },
     {
-      "details": "asdsad",
-      "dateFrom": "2022-09-12",
+      "taskName": "Jogging",
+      "details": "Jogging 1hr",
+      "dateFrom": "2022-10-03",
       "timeFrom": "",
-      "dateTo": "2022-09-30",
+      "dateTo": "2022-10-31",
       "timeTo": "",
-      "status": "pending",
-      "taskName": "asd",
+      "status": "completed",
       "id": 2
     },
     {
-      "taskName": "dsdsadas",
-      "details": "sadsad",
-      "dateFrom": "2022-09-21",
+      "taskName": "Warm Up",
+      "details": "Excercice",
+      "dateFrom": "2022-10-10",
       "timeFrom": "",
-      "dateTo": "2022-09-28",
+      "dateTo": "2022-10-16",
       "timeTo": "",
-      "status": "completed",
+      "status": "draft",
       "id": 3
     },
     {
-      "details": "fdsfadf",
-      "dateFrom": "2022-09-23",
+      "taskName": "Programming",
+      "details": "Node Js",
+      "dateFrom": "2022-10-17",
       "timeFrom": "",
-      "dateTo": "2022-09-30",
+      "dateTo": "2022-10-23",
       "timeTo": "",
-      "status": "completed",
-      "taskName": "dsfsfsdf",
+      "status": "draft",
       "id": 4
     },
     {
-      "details": "xzcvxcv",
-      "dateFrom": "2022-09-24",
+      "taskName": "Frontend",
+      "details": "React JS",
+      "dateFrom": "2022-10-24",
       "timeFrom": "",
-      "dateTo": "2022-09-28",
+      "dateTo": "2022-10-30",
       "timeTo": "",
-      "status": "pending",
-      "taskName": "dsfsfsfcxx",
+      "status": "completed",
       "id": 5
     },
     {
-      "taskName": "afads",
-      "details": "dafadf",
-      "dateFrom": "2022-09-22",
+      "taskName": "Programming",
+      "details": "Javascript",
+      "dateFrom": "2022-10-18",
       "timeFrom": "",
-      "dateTo": "2022-09-21",
+      "dateTo": "2022-10-19",
       "timeTo": "",
-      "status": "draft",
-      "id": 8
+      "status": "completed",
+      "id": 6
     },
     {
-      "taskName": "Default ",
-      "details": "adsfasd",
-      "dateFrom": "2022-09-07",
+      "taskName": "Sports",
+      "details": "Cricket",
+      "dateFrom": "2022-10-30",
       "timeFrom": "",
-      "dateTo": "2022-11-30",
+      "dateTo": "2022-10-31",
       "timeTo": "",
-      "status": "draft",
-      "id": 9
+      "status": "pending",
+      "id": 7
+    },
+    {
+      "taskName": "Test Task 211",
+      "details": "Test Description",
+      "dateFrom": "2022-10-05",
+      "timeFrom": "",
+      "dateTo": "2022-10-31",
+      "timeTo": "",
+      "status": "pending",
+      "id": 8
     }
   ]
 }

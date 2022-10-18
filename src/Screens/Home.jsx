@@ -25,7 +25,7 @@ const Home = () => {
 
   useEffect(() => {
     getTasks();
-  }, [tasks.length]);
+  }, []);
 
   const handleDelete = (id) => {
     axios.delete(`${url}/${id}`).then((res) => {
@@ -35,6 +35,10 @@ const Home = () => {
     setTimeout(() => {
       getTasks();
     }, 1000);
+  };
+
+  const handleEdit = (id) => {
+    alert(id);
   };
 
   const handleInputChange = (e, task) => {
@@ -123,39 +127,33 @@ const Home = () => {
                 {tasks.length !== 0 && (
                   <>
                     <h3>Tasks List</h3>
-                    {
-
-                    fitteredResult.length > 0 && (
+                    {fitteredResult.length > 0 && (
                       <>
-                    <div className="range-picker-container">
-                      <span>Filter : </span>
-                      <RangePicker
-                        className="range-picker"
-                        format="YYYY-MM-DD"
-                        onChange={onChange}
-                        // onOk={onOk}
-                      />
-                    </div>
-                   
-                    <NavLink to="/addtask">
-                      <button>Add Task</button>
-                    </NavLink>
-                      
-                      </>
-                    )
-                    }
+                        <div className="range-picker-container">
+                          <span>Filter : </span>
+                          <RangePicker
+                            className="range-picker"
+                            format="YYYY-MM-DD"
+                            onChange={onChange}
+                            
+                            // onOk={onOk}
+                          />
+                        </div>
 
+                        <NavLink to="/addtask">
+                          <button>Add Task</button>
+                        </NavLink>
+                      </>
+                    )}
                   </>
                 )}
               </div>
-              
+
               <div className="row-3">
-
                 {fitteredResult.length > 0 ? (
-
                   // if filter data is available
 
-                   fitteredResult.map((taskitem, index) => {
+                  fitteredResult.map((taskitem, index) => {
                     const {
                       id,
                       taskName,
@@ -176,24 +174,23 @@ const Home = () => {
                           dateFrom={dateFrom}
                           status={status}
                           handleDelete={handleDelete}
+                          handleEdit={handleEdit}
                         />
                       </>
                     );
                   })
-
+                ) : (
                   // if filter data is available
 
-                ) : (
                   // if no filter data is available
                   <div className="noFilter">
                     <h1>No Tasks Available for the selected dates</h1>
-                    
+
                     <NavLink to="/addtask">
                       <button>Add Task</button>
                     </NavLink>
                   </div>
                   // if no filter data is available
-                 
                 )}
               </div>
             </>
@@ -205,4 +202,3 @@ const Home = () => {
 };
 
 export default Home;
-

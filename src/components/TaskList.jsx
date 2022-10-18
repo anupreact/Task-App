@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const TaskList = (props) => {
   const {
@@ -9,6 +10,7 @@ const TaskList = (props) => {
     dateFrom,
     status,
     handleDelete,
+    handleEdit,
   } = props;
 
   return (
@@ -40,6 +42,13 @@ const TaskList = (props) => {
           </button>
         </div>
         <div className="col-3">
+
+          <NavLink to={`/edittask/${id}`} >
+          <button 
+          >
+            Edit
+          </button>
+          </NavLink>
           <button
             onClick={() => {
               handleDelete(id);

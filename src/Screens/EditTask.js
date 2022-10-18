@@ -1,37 +1,40 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Navigate } from "react-router-dom";
-import { ToastContainer, toast } from "react-toastify";
+import { Navigate, useParams } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { useToastMessage } from "../components/Hooks/useToastMessage";
 
-const AddTask = (props) => {
+const EditTask = (props) => {
+  let url = "http://localhost:5001/Tasks";
   const notifyMessage = useToastMessage();
 
-  const [formData, setFormData] = useState([]);
+  const params = useParams();
+  console.log(params.id);
+  const [data, setData] = useState({});
   const [redirect, setRedirect] = useState(false);
-  let url = "http://localhost:5001/Tasks";
 
-  const [state, setState] = useState({
-    taskName: "",
-    details: "",
-    dateFrom: "",
-    timeFrom: "",
-    dateTo: "",
-    timeTo: "",
-    status: "",
-  });
+  const fetch = () => {
+    axios.get(`${url}/${params.id}`).then((res) => {
+      console.log(res.data);
+      setData(res.data);
+    });
+  };
+  useEffect(() => {
+    fetch();
+  }, []);
 
+  console.log(" data ------- ", data);
   const { taskName, details, dateFrom, timeFrom, dateTo, timeTo, status } =
-    state;
+    data;
 
   const handleInputChange = (e) => {
     let { name, value } = e.target;
     // console.log(name, value);
-    setState({ ...state, [name]: value });
+    setData({ ...data, [name]: value });
   };
 
-  const postTask = async () => {
-    await axios.post(url, state).then((res) => {
+  const updateTask = async () => {
+    await axios.put(`${url}/${params.id}`, data).then((res) => {
       console.log(res);
     });
   };
@@ -39,13 +42,13 @@ const AddTask = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (taskName !== "" && dateFrom !== "" && dateTo !== "" && status !== "") {
-      setFormData([...formData, state]);
-      postTask();
+      //   setFormData([...formData, state]);
+      updateTask();
 
-      notifyMessage("Task Added Successfully");
+      notifyMessage("Task Updated Successfully");
 
       setTimeout(() => {
-        setState({
+        setData({
           taskName: "",
           details: "",
           dateFrom: "",
@@ -61,6 +64,7 @@ const AddTask = (props) => {
       alert("Mandatory fields required");
     }
   };
+
   return (
     <main className="addtask-container">
       <ToastContainer position="top-left" />
@@ -69,7 +73,7 @@ const AddTask = (props) => {
       <section className="container">
         <div className="main-content">
           <div className="heading">
-            <span>Add Task</span>
+            <span>Update Task</span>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="input">
@@ -144,6 +148,7 @@ const AddTask = (props) => {
                   id="completed"
                   name="status"
                   value="completed"
+                  checked={status === "completed"}
                   onChange={handleInputChange}
                 />
                 <label htmlFor="completed">Completed</label>
@@ -154,6 +159,7 @@ const AddTask = (props) => {
                   id="pending"
                   name="status"
                   value="pending"
+                  checked={status === "pending"}
                   onChange={handleInputChange}
                 />
                 <label htmlFor="css">Pending</label>
@@ -164,13 +170,14 @@ const AddTask = (props) => {
                   id="draft"
                   name="status"
                   value="draft"
+                  checked={status === "draft"}
                   onChange={handleInputChange}
                 />
                 <label htmlFor="draft">Draft</label>
               </span>
             </div>
 
-            <button className="submit-btn">Add-Task</button>
+            <button className="submit-btn">Update-Task</button>
           </form>
         </div>
       </section>
@@ -178,4 +185,4 @@ const AddTask = (props) => {
   );
 };
 
-export default AddTask;
+export default EditTask;
