@@ -258,14 +258,14 @@ body {
               background: rgb(70, 167, 206);
               border: none;
               cursor: pointer;
-              transition: 0.3 sec ease all;
+              transition: 0.1s ease all;
               color: white;
               &:hover {
                 background: rgb(26, 176, 235);
+                transform: scale(.9);
               }
               &:nth-child(2) {
-                background: rgb(248, 55, 55);
-                transition: 0.3s ease all;
+                background: rgb(213, 74, 14);
                 &:hover {
                   background: rgb(249, 28, 28);
                 }
