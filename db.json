@@ -1,8 +1,8 @@
 {
   "tasks": [
     {
-      "taskName": "Meditation",
-      "details": "Meditation 15mins\n ",
+      "taskName": "Meditation ",
+      "details": "Meditation 15mins \n ",
       "dateFrom": "2022-10-17",
       "timeFrom": "",
       "dateTo": "2022-10-31",
@@ -11,34 +11,14 @@
       "id": 1
     },
     {
-      "taskName": "Jogging",
-      "details": "Jogging 1hr",
-      "dateFrom": "2022-10-03",
-      "timeFrom": "",
-      "dateTo": "2022-10-31",
-      "timeTo": "",
-      "status": "completed",
-      "id": 2
-    },
-    {
       "taskName": "Warm Up",
       "details": "Excercice",
       "dateFrom": "2022-10-10",
       "timeFrom": "",
       "dateTo": "2022-10-16",
       "timeTo": "",
-      "status": "draft",
+      "status": "completed",
       "id": 3
-    },
-    {
-      "taskName": "Programming",
-      "details": "Node Js",
-      "dateFrom": "2022-10-17",
-      "timeFrom": "",
-      "dateTo": "2022-10-23",
-      "timeTo": "",
-      "status": "draft",
-      "id": 4
     },
     {
       "taskName": "Frontend",
@@ -49,36 +29,6 @@
       "timeTo": "",
       "status": "completed",
       "id": 5
-    },
-    {
-      "taskName": "Programming",
-      "details": "Javascript",
-      "dateFrom": "2022-10-18",
-      "timeFrom": "",
-      "dateTo": "2022-10-19",
-      "timeTo": "",
-      "status": "completed",
-      "id": 6
-    },
-    {
-      "taskName": "Sports",
-      "details": "Cricket",
-      "dateFrom": "2022-10-30",
-      "timeFrom": "",
-      "dateTo": "2022-10-31",
-      "timeTo": "",
-      "status": "pending",
-      "id": 7
-    },
-    {
-      "taskName": "Test Task 211",
-      "details": "Test Description",
-      "dateFrom": "2022-10-05",
-      "timeFrom": "",
-      "dateTo": "2022-10-31",
-      "timeTo": "",
-      "status": "pending",
-      "id": 8
     }
   ]
 }

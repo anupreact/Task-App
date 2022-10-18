@@ -28,9 +28,9 @@ const TaskList = (props) => {
             <span className="geekmark"></span>
           </label>
           <div className="details">
-            <span>{taskName}</span>
-            <br />
-            <span>{dateFrom}</span>
+            <div>{taskName}</div>
+            
+            <div>{dateFrom}</div>
           </div>
         </div>
         <div className="description">{taskitem.details}</div>
@@ -57,7 +57,9 @@ const TaskList = (props) => {
             Delete
           </button>
         </div>
+
       </div>
+     
     </>
   );
 };

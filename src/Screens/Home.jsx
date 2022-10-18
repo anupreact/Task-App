@@ -176,6 +176,7 @@ const Home = () => {
                           handleDelete={handleDelete}
                           handleEdit={handleEdit}
                         />
+                        
                       </>
                     );
                   })
@@ -195,6 +196,13 @@ const Home = () => {
               </div>
             </>
           )}
+        </div>
+
+        <div className="Add-button">
+          <NavLink to = "addtask">
+
+          <button>Add Task</button>
+          </NavLink>
         </div>
       </section>
     </main>
