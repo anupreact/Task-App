@@ -19,6 +19,7 @@ const EditTask = (props) => {
       setData(res.data);
     });
   };
+  console.log("test")
   useEffect(() => {
     fetch();
   }, []);
