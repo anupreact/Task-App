@@ -1,3 +1,14 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "taskName": "Programming",
+      "details": "React",
+      "dateFrom": "2022-10-18",
+      "timeFrom": "",
+      "dateTo": "2022-10-30",
+      "timeTo": "",
+      "status": "draft",
+      "id": 1
+    }
+  ]
 }
