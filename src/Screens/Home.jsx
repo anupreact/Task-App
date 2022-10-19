@@ -63,7 +63,10 @@ const Home = () => {
     let { name, value, checked } = e.target;
     console.log(name, value, checked, task.id);
 
-    axios.put(`${url}/${task.id}`, {
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL , REACT_APP_PROD_URL} = process.env
+
+    axios.put(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}/${task.id}`, {
       taskName,
       details,
       dateFrom,
