@@ -14,7 +14,12 @@ const EditTask = (props) => {
   const [redirect, setRedirect] = useState(false);
 
   const fetch = () => {
-    axios.get(`${url}/${params.id}`).then((res) => {
+
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL , REACT_APP_PROD_URL} = process.env
+
+
+    axios.get(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}/${params.id}`).then((res) => {
       console.log(res.data);
       setData(res.data);
     });

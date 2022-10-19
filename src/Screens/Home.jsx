@@ -17,7 +17,11 @@ const Home = () => {
   let url = "http://localhost:5012/tasks";
 
   const getTasks = async () => {
-    axios.get(url).then((res) => {
+
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL , REACT_APP_PROD_URL} = process.env
+
+    axios.get(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`).then((res) => {
       console.log(res.data);
       setTasks(res.data);
     });
@@ -28,7 +32,10 @@ const Home = () => {
   }, []);
 
   const handleDelete = (id) => {
-    axios.delete(`${url}/${id}`).then((res) => {
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL , REACT_APP_PROD_URL} = process.env
+
+    axios.delete(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}/${id}`).then((res) => {
       console.log(res.data);
     });
     notifyMessage("Task Deleted Successfully");

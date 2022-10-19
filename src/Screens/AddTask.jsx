@@ -31,7 +31,12 @@ const AddTask = (props) => {
   };
 
   const postTask = async () => {
-    await axios.post(url, state).then((res) => {
+
+    const devEnv = process.env.NODE_ENV !== "production"
+    const {REACT_APP_DEV_URL , REACT_APP_PROD_URL} = process.env
+
+
+    await axios.post(`${devEnv ? REACT_APP_DEV_URL : REACT_APP_PROD_URL}`, state).then((res) => {
       console.log(res);
     });
   };

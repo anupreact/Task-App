@@ -9,6 +9,26 @@
       "timeTo": "",
       "status": "draft",
       "id": 1
+    },
+    {
+      "taskName": "Programming",
+      "details": "Javascript",
+      "dateFrom": "2022-10-22",
+      "timeFrom": "",
+      "dateTo": "2022-10-28",
+      "timeTo": "",
+      "status": "draft",
+      "id": 2
+    },
+    {
+      "taskName": "Test Task 22",
+      "details": "desc",
+      "dateFrom": "2022-10-30",
+      "timeFrom": "",
+      "dateTo": "2022-11-01",
+      "timeTo": "",
+      "status": "pending",
+      "id": 3
     }
   ]
 }
