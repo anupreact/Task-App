@@ -1,17 +1,17 @@
-const jsonserver = require("json-server")
-const server = jsonserver.create()
-const router = jsonserver.router("./db.json")
+const jsonServer = require("json-server")
+const server = jsonServer.create()
+const router = jsonServer.router("./db.json")
 
-const middlewares = jsonserver.defaults({
+const middlewares = jsonServer.defaults({
     static : "./build"
 })
 
-const port = process.env.port || 5001
+const port = process.env.PORT || 5012
 
 server.use(middlewares)
 
 server.use(
-    jsonserver.rewriter({
+    jsonServer.rewriter({
         "/api/*":"/$1"
     })
 )
