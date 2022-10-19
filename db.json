@@ -1,34 +1,14 @@
 {
   "tasks": [
     {
-      "taskName": "Meditation ",
-      "details": "Meditation 15mins \n ",
-      "dateFrom": "2022-10-17",
+      "taskName": "Test Task 22",
+      "details": "desc",
+      "dateFrom": "2022-10-22",
       "timeFrom": "",
-      "dateTo": "2022-10-31",
-      "timeTo": "",
-      "status": "completed",
-      "id": 1
-    },
-    {
-      "taskName": "Warm Up",
-      "details": "Excercice",
-      "dateFrom": "2022-10-10",
-      "timeFrom": "",
-      "dateTo": "2022-10-16",
-      "timeTo": "",
-      "status": "completed",
-      "id": 3
-    },
-    {
-      "taskName": "Frontend",
-      "details": "React JS",
-      "dateFrom": "2022-10-24",
-      "timeFrom": "",
-      "dateTo": "2022-10-30",
+      "dateTo": "2022-10-25",
       "timeTo": "",
       "status": "pending",
-      "id": 5
+      "id": 1
     }
   ]
 }

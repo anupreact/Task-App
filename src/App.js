@@ -6,11 +6,13 @@ import AddTask from './Screens/AddTask';
 import Home from './Screens/Home';
 import 'antd/dist/antd.css';
 import EditTask from './Screens/EditTask';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
+      <ScrollToTop/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/addtask" element={<AddTask />} />

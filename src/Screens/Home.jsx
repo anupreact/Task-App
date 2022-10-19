@@ -116,10 +116,10 @@ const Home = () => {
         <div className="main-content">
           {tasks.length === 0 ? (
             <div className="row-2">
-              <h4>You currently have no active tasks</h4>
-              <NavLink to="/addtask">
+              <span>You currently have no active tasks</span>
+              {/* <NavLink to="/addtask">
                 <button>Add New Task</button>
-              </NavLink>
+              </NavLink> */}
             </div>
           ) : (
             <>
